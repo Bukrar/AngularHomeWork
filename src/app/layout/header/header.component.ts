@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -11,5 +11,21 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
+
+
+
+  @Input()
+  public set headTitleName(v: string) {
+    if (v)
+    {
+      this._headTitleName = v;
+      this.changeTitle.emit(this._headTitleName + "BBB");
+    }
+  }
+  _headTitleName = 'orgin';
+
+  @Output() changeTitle = new EventEmitter();
+
+
 
 }

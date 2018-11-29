@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   constructor(private getArticle: RealwordService) { }
 
   ngOnInit() {
-    this.articleList = this.getArticle.getArticleList().subscribe(x => this.articleList = x);
+     this.getArticle.getArticleList().subscribe(x => this.articleList = x);
   }
 
 }

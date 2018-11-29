@@ -1,5 +1,6 @@
-<app-header></app-header>
-
+<app-header [headTitleName]= "titleName" (changeTitle)="getOutPut($event)"></app-header>
+<input type="text" (keyup.enter)="changeTitle($event.target.value)">
+<p>{{outPutName}}</p>
 <router-outlet></router-outlet>
 
 <app-footer></app-footer>

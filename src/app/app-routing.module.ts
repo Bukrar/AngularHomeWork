@@ -11,33 +11,36 @@ import { SettingsComponent } from './pages/settings/settings.component';
 import { ArticleComponent } from './pages/article/article.component';
 
 const routes: Routes = [
-{
-  path: "", component : HomeComponent
-},
-{
-  path: "login", component: LoginComponent
-},
-{
-  path: "article/:id", component: ArticleComponent
-},
-{
-  path: "register", component: RegisterComponent
-},
-{
-  path: "create", component : CreateComponent
-},
-{
-  path: "edit", component : EditComponent
-},
-{
-  path: "profile", component : ProfileComponent
-},
-{
-  path: "settings", component : SettingsComponent
-},
-{
-  path: "**", component: LayoutComponent
-}
+{ path: '', loadChildren: './layout/layout.module#LayoutModule'},
+
+{path:"login" ,component : LoginComponent},
+
+
+{ path: '**', redirectTo: '', pathMatch: 'full'}
+
+
+// {
+//   path: "login", component: LoginComponent
+// },
+// {
+//   path: "article/:id", component: ArticleComponent
+// },
+// {
+//   path: "register", component: RegisterComponent
+// },
+// {
+//   path: "create", component : CreateComponent
+// },
+// {
+//   path: "edit", component : EditComponent
+// },
+// {
+//   path: "profile", component : ProfileComponent
+// },
+// {
+//   path: "settings", component : SettingsComponent
+// },
+
 ];
 
 @NgModule({

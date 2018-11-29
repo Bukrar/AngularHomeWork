@@ -18,8 +18,5 @@ export class ArticleComponent implements OnInit {
     this.route.params.subscribe(x => {
       this.getarticle.getArticleContent(x['id']).subscribe(x => { this.articleContent = x });
     });
-
-
   }
-
 }

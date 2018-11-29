@@ -7,23 +7,18 @@ import { ThrowStmt } from '@angular/compiler';
 })
 export class RealwordService {
 
-  //articleData;
-  //articleContent;
-  constructor(private http: HttpClient) {
-    //this.http.get('http://localhost:3000/article').subscribe(x => this.articleData = x);
-  }
-
-  getcontent() {
-    return this.http.get('http://localhost:3000/posts')
-  }
+  constructor(private http: HttpClient) {}
 
   getArticleList() {
     return this.http.get('http://localhost:3000/article');
   }
 
   getArticleContent(articleid) {
-    // return this.http.get('http://localhost:3000/article' );
     return this.http.get(`http://localhost:3000/article/${articleid}`);
   }
+
+  // createArticle(){
+  //   this.http.post('http://localhost:3000/article',{"id":  });
+  // }
 
 }

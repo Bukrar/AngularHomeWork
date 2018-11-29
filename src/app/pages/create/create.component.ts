@@ -8,12 +8,10 @@ import { RealwordService } from 'src/app/services/realword.service';
 })
 export class CreateComponent implements OnInit {
 
-  data;
-  constructor(private getcontent: RealwordService) { }
+  constructor(private create: RealwordService) { }
 
   ngOnInit() {
-    this.getcontent.getcontent().subscribe(value => {this.data = value;console.log(value)});
-    console.log(this.data);
+
   }
 
 }
