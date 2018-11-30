@@ -17,8 +17,8 @@ export class RealwordService {
     return this.http.get(`http://localhost:3000/article/${articleid}`);
   }
 
-  // createArticle(){
-  //   this.http.post('http://localhost:3000/article',{"id":  });
-  // }
+  createArticle(body){
+    this.http.post('http://localhost:3000/article',body);
+  }
 
 }

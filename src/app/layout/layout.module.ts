@@ -6,14 +6,13 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LayoutComponent } from './layout.component';
 import { ShareModule } from '../share/share.module';
-import { HomeComponent } from '../pages/home/home.component';
+
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     LayoutComponent,
-    HomeComponent
   ],
   imports: [
     CommonModule,

@@ -12,12 +12,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-
-
   @Input()
   public set headTitleName(v: string) {
-    if (v)
-    {
+    if (v) {
       this._headTitleName = v;
       this.changeTitle.emit(this._headTitleName + "BBB");
     }
@@ -25,7 +22,4 @@ export class HeaderComponent implements OnInit {
   _headTitleName = 'orgin';
 
   @Output() changeTitle = new EventEmitter();
-
-
-
 }
