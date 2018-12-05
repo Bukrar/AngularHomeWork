@@ -8,7 +8,6 @@
             <fieldset class="form-group"  >
                 <input type="text" class="form-control form-control-lg" placeholder="Article Title" formControlName="title" id="title" name="title">
                <div *ngIf="title.hasError('required')">123456 </div>
-               <div *ngIf="title.errors">123456 </div>
             </fieldset>
             <!-- <fieldset class="form-group">
                 <input type="text" class="form-control" placeholder="What's this article about?">
