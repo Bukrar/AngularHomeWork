@@ -22,7 +22,7 @@
           <fieldset class="form-group">
             <input class="form-control form-control-lg" type="password" placeholder="Password"  [(ngModel)]="password" id="password" name="password" required>
           </fieldset>
-          <button class="btn btn-lg btn-primary pull-xs-right" [disabled]="!loginForm.form.valid">
+          <button class="btn btn-lg btn-primary pull-xs-right" [disabled]="!loginForm.form.valid" (click)="login()">
             Sign up
           </button>
         </form>
